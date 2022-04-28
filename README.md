@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Место на «React» с авторизацией и регистрацией 
+### *Учебный проект от [Яндекс.Практикум](https://practicum.yandex.ru/web/)*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание проекта
+Место - это интерактивная страница, на которой пользователи могут делиться фотографиями, удалять их и ставить лайки. 
 
-## Available Scripts
+Данный учебный проект создан в рамках прохождения 4-12 спринтов курса Веб-разработчик. Цель проекта закрепить на практике пройденный учебный материал, в который входят:
 
-In the project directory, you can run:
+- Портирование веб-приложения на «Реакт»;
+- Применение декларативного подхода;
+- Создание функциональных компонентов;
+- Использование «Реакт»-хуков;
+- Работа c локальным хранилищем и JWT-токеном.
 
-### `npm start`
+## Функционал:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Редактирование аватара и профиля;
+- Добавление фотографии и лайков;
+- Удаление фотографии и лайков;
+- Открытие фотографии в полном размере;
+- Авторизация и регистрация пользователей.
+- бургерное меню при расшерении экрана ниже 700px
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Стек технологий:
 
-### `npm test`
+- HTML5;
+- CSS3:
+  - Flexbox;
+  - Grid Layout;
+  - Positioning;
+  - Adaptive UI;
+  - Media Queries;
+- Методология БЭМ;
+- Фйловая структура Nested БЭМ;
+- JavaScript:
+  - Стиль CamelCase;
+  - Объектно-ориентированное программирование;
+  - Промисы (Promise);
+  - Асинхронность и оптимизация;
+  - API (Application Programming Interface);
+- Webpack;
+- React JS:
+  - Create React App;
+  - Портирование разметки в JSX;
+  - Функциональные компоненты;
+  - Хуки.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Установка и запуск приложения:
 
-### `npm run build`
+Клонировать репозиторий:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    git clone https://github.com/elwoode/react-mesto-auth.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Установить зависимости:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    npm install
 
-### `npm run eject`
+Запустить приложение:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    npm run start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Языки:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- JavaScript
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Библиотеки:
 
-## Learn More
+- ReactJS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## [Ссылка на сайт](https://elwoode.github.io/react-mesto-auth/)
