@@ -196,7 +196,7 @@ function App() {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
-        <Header emailName={emailName} onSignOut={onSignOut} route="/" />
+        <Header emailName={emailName} onSignOut={onSignOut} />
         <Routes>
           <Route path="/sign-in" element={
             <>
@@ -224,9 +224,7 @@ function App() {
                 onCardDelete={handleCardDelete}
               />
               <Footer />
-            </>
-          } />
-
+            </>} />
           <Route path="*" element={<Navigate to={isLoggedIn ? "/" : "/sign-in"} />} />
         </Routes>
 
