@@ -27,7 +27,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [cards, setCards] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [emailName, setEmailName] = useState(null);
+  const [emailName, setEmailName] = useState('');
   const [popupImage, setPopupImage] = useState("");
   const [popupTitle, setPopupTitle] = useState("");
   const [infoTooltip, setInfoTooltip] = useState(false);
@@ -97,21 +97,15 @@ function App() {
   }
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some((i) => i._id === currentUser._id);
-
-    if (!isLiked) {
-      api.likeCard(card._id).then((newCard) => {
-        setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
-      }).catch((err) => {
-        console.error(err);
+    const isLiked = card.likes.some(i => i._id === currentUser._id);
+    api
+      .setLikeStatus(card._id, isLiked)
+      .then((newCard) => {
+        setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
+      })
+      .catch((err) => {
+        console.log(err);
       });
-    } else {
-      api.removeLike(card._id).then((newCard) => {
-        setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
-      }).catch((err) => {
-        console.error(err);
-      });
-    }
   }
 
   function handleAddPlaceSubmit(data) {
@@ -195,7 +189,6 @@ function App() {
 
   function onSignOut() {
     setIsLoggedIn(false);
-    setEmailName(null);
     navigate("/sign-in");
     localStorage.removeItem("jwt");
   }
@@ -203,24 +196,22 @@ function App() {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
+        <Header emailName={emailName} onSignOut={onSignOut} route="/" />
         <Routes>
           <Route path="/sign-in" element={
             <>
-              <Header title="Регистрация" route="/sign-up" />
               <Login onLogin={onLogin} />
             </>
           } />
 
           <Route path="/sign-up" element={
             <>
-              <Header title="Войти" route="/sign-in" />
               <Register onRegister={onRegister} />
             </>
           } />
 
           <Route exact path="/" element={
             <>
-              <Header title="Выйти" mail={emailName} onClick={onSignOut} route="" />
               <ProtectedRoute
                 component={Main}
                 isLogged={isLoggedIn}
